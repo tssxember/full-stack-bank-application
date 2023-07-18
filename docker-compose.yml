@@ -1,0 +1,22 @@
+version: '2'
+services:
+  client:
+    # Step 1 - Point build step to the client directory
+    build: './client'
+    ports:
+      # Step 2 - Add the port that the client application runs on - (port:port).
+      - '3000:3000'
+    depends_on:
+      - server
+  server:
+    # Step 3 - Point build step to the server directory
+    build: './server'
+    ports:
+      # Step 4 - Add the port that the server application runs on - (port:port).
+      - '8080:8080'
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    ports:
+      - '27017:27017'
