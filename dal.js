@@ -1,7 +1,7 @@
 const MongoClient = require('mongodb').MongoClient;
 //const url         = 'mongodb://localhost:27017';
 
-const url       = 'mongodb+srv://user1:testpassword@cluster0.3xfr9x4.mongodb.net/';
+const url       = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.ebhzh.mongodb.net/?retryWrites=true&w=majority`;
 let db            = null;
  
 // connect to mongo
