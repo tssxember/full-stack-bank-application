@@ -1,7 +1,7 @@
 const MongoClient = require('mongodb').MongoClient;
-//const url         = 'mongodb://localhost:27017';
+const url         = 'mongodb://localhost:27017';
 
-const url       = 'mongodb+srv://user1:testpassword@cluster0.3xfr9x4.mongodb.net/';
+//const url       = 'mongodb+srv://user1:testpassword@cluster0.3xfr9x4.mongodb.net/';
 let db            = null;
  
 // connect to mongo
@@ -24,17 +24,7 @@ function create(name, email, password){
     })
 }
 
-// find user account
-function find(email){
-    return new Promise((resolve, reject) => {    
-        const customers = db
-            .collection('users')
-            .find({email: email})
-            .toArray(function(err, docs) {
-                err ? reject(err) : resolve(docs);
-        });    
-    })
-}
+
 
 // find user account
 function findOne(email){
@@ -74,4 +64,4 @@ function all(){
 }
 
 
-module.exports = {create, findOne, find, update, all};
+module.exports = {create, findOne, update, all};
