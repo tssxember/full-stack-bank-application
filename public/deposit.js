@@ -73,7 +73,7 @@ function Deposit(){
   
     return (<>
       <p><b>User: </b>{email}</p>
-      <p><b>Balance: </b>{balance}</p>
+      <p><b>Balance: $</b>{balance}</p>
       
       Deposit<br/>
       <input type="input" 

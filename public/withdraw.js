@@ -77,7 +77,7 @@ function Withdraw(){
     return (<>
       
       <p><b>User: </b>{email}</p>
-      <p><b>Balance: </b>{balance}</p>  
+      <p><b>Balance: $</b>{balance}</p>  
   
       Withdraw<br/>
       <input type="input" 
